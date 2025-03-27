@@ -1,0 +1,31 @@
+{
+  "id": "plugin.com.pot-app.rapid-py",
+  "plugin_type": "recognize",
+  "icon": "icon.png",
+  "display": "Rapid OCR Python Version",
+  "homepage": "https://github.com/ferstar/pot-app-recognize-plugin-rapid-py",
+  "needs": [
+    {
+      "key": "model",
+      "display": "Model",
+      "type": "select",
+      "options": {
+        "with_onnx": "ONNXRuntime",
+        "with_openvino": "OpenVINO",
+        "with_paddle": "PaddlePaddle",
+        "with_torch": "PyTorch"
+      }
+    }
+  ],
+  "language": {
+    "auto": "ch",
+    "zh_cn": "ch",
+    "zh_tw": "chinese_cht",
+    "en": "en",
+    "ja": "japan",
+    "ko": "korean",
+    "ru": "cyrillic",
+    "ar": "arabic",
+    "mn_cy": "cyrillic"
+  }
+}
