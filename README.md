@@ -14,7 +14,7 @@
 
 2. 打开 Pot-偏好设置-服务设置-翻译-添加外部插件-安装外部插件
 
-3. 选择`plugin.com.pot-app.rapid-py.potext`文件，安装成功
+3. [下载插件](https://github.com/ferstar/pot-app-recognize-plugin-rapid-py/releases)，选择`plugin.com.pot-app.rapid-py.potext`文件，安装成功
 
 4. 进入本插件目录，如 Linux 路径为`~/.config/com.pot-app.desktop/plugins/recognize/plugin.com.pot-app.rapid-py`
 
