@@ -2,8 +2,6 @@ async function recognize(_base64, lang, options) {
     const { config, utils } = options;
     const { run, cacheDir, osType, pluginDir } = utils;
     let { model = "with_onnx" } = config
-    let exeName = "uv";
-
     let result = await run(`uv`, [
         `run`,
         `${pluginDir}/main.py`,

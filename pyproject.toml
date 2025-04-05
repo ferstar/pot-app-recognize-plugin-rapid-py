@@ -1,12 +1,13 @@
 [project]
-name = "plugin-com-pot-app-rapid"
-version = "0.1.0"
-description = "Add your description here"
+name = "plugin-com-pot-app-rapid-py"
+version = "1.0.1"
+description = "Yet another OCR plugin for pot app"
 readme = "README.md"
 requires-python = ">=3.10, <3.13"
 dependencies = [
-    "rapidocr>=2.0.4",
-    "requests>=2.32.3",
+    "onnxruntime~=1.21.0",
+    "rapidocr~=2.0.6",
+    "requests~=2.32.3",
 ]
 
 
