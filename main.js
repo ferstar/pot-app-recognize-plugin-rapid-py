@@ -4,6 +4,8 @@ async function recognize(_base64, lang, options) {
     let { model = "with_onnx" } = config
     let result = await run(`uv`, [
         `run`,
+        `--group`,
+        `${model}`,
         `${pluginDir}/main.py`,
         `${model}`,
         `${cacheDir}/pot_screenshot_cut.png`,

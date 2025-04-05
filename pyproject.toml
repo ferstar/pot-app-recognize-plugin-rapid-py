@@ -5,7 +5,6 @@ description = "Yet another OCR plugin for pot app"
 readme = "README.md"
 requires-python = ">=3.10, <3.13"
 dependencies = [
-    "onnxruntime~=1.21.0",
     "rapidocr~=2.0.6",
     "requests~=2.32.3",
 ]
@@ -15,3 +14,18 @@ dependencies = [
 name = "tsinghua-pypi"
 url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
 default = true
+
+[dependency-groups]
+with_onnx = [
+    "onnxruntime>=1.21.0",
+]
+with_openvino = [
+    "openvino>=2025.0.0",
+]
+with_paddle = [
+    "paddlepaddle>=3.0.0",
+    "setuptools>=78.1.0",
+]
+with_torch = [
+    "torch>=2.6.0",
+]
