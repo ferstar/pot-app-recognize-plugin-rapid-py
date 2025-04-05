@@ -1,5 +1,5 @@
 name: Build
-on: workflow_dispatch
+on: push
 permissions: write-all
 
 jobs:
