@@ -2,13 +2,11 @@ async function recognize(_base64, lang, options) {
     const { config, utils } = options;
     const { run, cacheDir, osType, pluginDir } = utils;
     let { model = "with_onnx" } = config
-    let exeName = "main.py";
+    let exeName = "uv";
 
-    if (osType !== "Windows_NT") {
-        let res = await run('chmod', ['+x', `${pluginDir}/${exeName}`]);
-    }
-
-    let result = await run(`${pluginDir}/${exeName}`, [
+    let result = await run(`uv`, [
+        `run`,
+        `${pluginDir}/main.py`,
         `${model}`,
         `${cacheDir}/pot_screenshot_cut.png`,
     ]);
