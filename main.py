@@ -1,8 +1,14 @@
 #!/usr/bin/env .venv/bin/python
 import sys
 
-from rapidocr import RapidOCR
+from rapidocr import RapidOCR, OCRVersion, EngineType
 
 if __name__ == "__main__":
-    for txt in RapidOCR(params={f"Global.{sys.argv[1]}": True})(sys.argv[2]).txts:
+    engine = RapidOCR(
+        params={
+            "Rec.engine_type": EngineType(sys.argv[1]),
+            "Rec.ocr_version": OCRVersion(sys.argv[2]),
+        }
+    )
+    for txt in engine(sys.argv[3]).txts:
         print(txt)

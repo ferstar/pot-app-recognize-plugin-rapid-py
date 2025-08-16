@@ -6,14 +6,23 @@
   "homepage": "https://github.com/ferstar/pot-app-recognize-plugin-rapid-py",
   "needs": [
     {
-      "key": "model",
-      "display": "Model",
+      "key": "engine",
+      "display": "Engine",
       "type": "select",
       "options": {
-        "with_onnx": "ONNXRuntime",
-        "with_openvino": "OpenVINO",
-        "with_paddle": "PaddlePaddle",
-        "with_torch": "PyTorch"
+        "onnxruntime": "ONNXRuntime",
+        "openvino": "OpenVINO",
+        "paddle": "PaddlePaddle",
+        "torch": "PyTorch"
+      }
+    },
+    {
+      "key": "ocr",
+      "display": "OCR",
+      "type": "select",
+      "options": {
+        "PP-OCRv5": "PP-OCRv5",
+        "PP-OCRv4": "PP-OCRv4"
       }
     }
   ],

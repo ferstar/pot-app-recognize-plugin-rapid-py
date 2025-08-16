@@ -1,13 +1,14 @@
 async function recognize(_base64, lang, options) {
     const { config, utils } = options;
     const { run, cacheDir, osType, pluginDir } = utils;
-    let { model = "with_onnx" } = config
+    let { engine = "onnx", ocr = "PP-OCRv5" } = config
     let result = await run(`uv`, [
         `run`,
         `--group`,
-        `${model}`,
+        `${engine}`,
         `${pluginDir}/main.py`,
-        `${model}`,
+        `${engine}`,
+        `${ocr}`,
         `${cacheDir}/pot_screenshot_cut.png`,
     ]);
     if (result.status === 0) {

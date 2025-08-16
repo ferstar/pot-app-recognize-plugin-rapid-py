@@ -1,31 +1,33 @@
 [project]
 name = "plugin-com-pot-app-rapid-py"
-version = "1.0.1"
+version = "3.3.1"
 description = "Yet another OCR plugin for pot app"
 readme = "README.md"
 requires-python = ">=3.10, <3.13"
 dependencies = [
-    "rapidocr~=2.0.6",
-    "requests~=2.32.3",
+    "rapidocr~=3.3.1",
+    "requests",
 ]
 
 
 [[tool.uv.index]]
 name = "tsinghua-pypi"
 url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
-default = true
 
 [dependency-groups]
-with_onnx = [
+onnxruntime = [
     "onnxruntime>=1.21.0",
 ]
-with_openvino = [
+openvino = [
     "openvino>=2025.0.0",
 ]
-with_paddle = [
+paddle = [
     "paddlepaddle>=3.0.0",
     "setuptools>=78.1.0",
 ]
-with_torch = [
+torch = [
     "torch>=2.6.0",
 ]
+
+[tool.uv]
+default-groups = ["onnxruntime"]
