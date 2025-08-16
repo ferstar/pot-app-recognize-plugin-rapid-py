@@ -1,7 +1,7 @@
 async function recognize(_base64, lang, options) {
     const { config, utils } = options;
     const { run, cacheDir, osType, pluginDir } = utils;
-    let { engine = "onnx", ocr = "PP-OCRv5" } = config
+    let { engine = "onnxruntime", ocr = "PP-OCRv5" } = config
     let result = await run(`uv`, [
         `run`,
         `--group`,
