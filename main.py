@@ -3,6 +3,8 @@ import sys
 
 from rapidocr import RapidOCR, OCRVersion, EngineType
 
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+
 if __name__ == "__main__":
     engine = RapidOCR(
         params={
