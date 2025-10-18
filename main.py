@@ -1,4 +1,6 @@
 #!/usr/bin/env .venv/bin/python
+import io
+import os
 import sys
 
 from rapidocr import RapidOCR, OCRVersion, EngineType
