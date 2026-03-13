@@ -6,6 +6,9 @@ from rapidocr import RapidOCR, OCRVersion, EngineType
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
+RESULT_START = "__POT_APP_OCR_RESULT_START__"
+RESULT_END = "__POT_APP_OCR_RESULT_END__"
+
 
 def build_params(engine: str, ocr_version: str, backend: str) -> dict:
     params = {
@@ -64,5 +67,8 @@ if __name__ == "__main__":
     image_path = sys.argv[4]
 
     engine = RapidOCR(params=build_params(engine_type, ocr_version, backend))
-    for txt in engine(image_path).txts:
+    result = engine(image_path)
+    print(RESULT_START)
+    for txt in (result.txts or ()):
         print(txt)
+    print(RESULT_END)
