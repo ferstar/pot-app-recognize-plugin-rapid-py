@@ -1,6 +1,6 @@
 [project]
 name = "plugin-com-pot-app-rapid-py"
-version = "3.7.0"
+version = "3.7.1"
 description = "Yet another OCR plugin for pot app"
 readme = "README.md"
 requires-python = ">=3.10, <4"
@@ -18,6 +18,12 @@ url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
 onnxruntime = [
     "onnxruntime>=1.21.0",
 ]
+onnxruntime-gpu = [
+    "onnxruntime-gpu>=1.21.0",
+]
+onnxruntime-directml = [
+    "onnxruntime-directml>=1.21.0; platform_system == 'Windows'",
+]
 openvino = [
     "openvino>=2025.0.0",
 ]
@@ -27,6 +33,13 @@ paddle = [
 ]
 torch = [
     "torch>=2.6.0",
+]
+tensorrt = [
+    "tensorrt>=10.13.0; platform_system != 'Darwin'",
+    "cuda-bindings>=12.8.0; platform_system != 'Darwin'",
+]
+mnn = [
+    "MNN>=3.0.0",
 ]
 
 [tool.uv]

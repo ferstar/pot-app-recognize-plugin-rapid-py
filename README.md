@@ -4,7 +4,15 @@
 
 因为官方 [pot-app-recognize-plugin-rapid](https://github.com/pot-app/pot-app-recognize-plugin-rapid) 插件依赖的 [RapidOcrOnnx](https://github.com/RapidAI/RapidOcrOnnx) 更新太慢，我又需要使用他家更新更强的模型，刚好会点 Python，所以就照猫画虎写了这个插件。
 
-本插件支持 RapidOCR 的四种模型：ONNXRuntime（默认）/OpenVINO/PaddlePaddle/PyTorch，可以自行配置使用。
+本插件支持 RapidOCR 的六种推理引擎：ONNXRuntime（默认）/OpenVINO/PaddlePaddle/PyTorch/TensorRT/MNN，可以自行配置使用。
+
+同时支持常见推理后端切换：
+
+1. ONNXRuntime：CPU / CUDA / DirectML / CoreML / CANN
+2. PaddlePaddle：CPU / CUDA / NPU
+3. PyTorch：CPU / CUDA / NPU / MPS
+
+> 注意：不同推理引擎与后端的可用性取决于操作系统、硬件和 Python 依赖。例如 `DirectML` 仅支持 Windows，`CoreML` 仅支持 macOS，`TensorRT` 需要 NVIDIA CUDA 环境。
 
 更多模型详情见：https://rapidai.github.io/RapidOCRDocs/main/model_list/
 

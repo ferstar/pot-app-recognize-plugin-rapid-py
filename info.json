@@ -13,7 +13,23 @@
         "onnxruntime": "ONNXRuntime",
         "openvino": "OpenVINO",
         "paddle": "PaddlePaddle",
-        "torch": "PyTorch"
+        "torch": "PyTorch",
+        "tensorrt": "TensorRT",
+        "mnn": "MNN"
+      }
+    },
+    {
+      "key": "backend",
+      "display": "Backend",
+      "type": "select",
+      "options": {
+        "auto": "Auto / CPU",
+        "cuda": "CUDA",
+        "directml": "DirectML (ONNXRuntime)",
+        "coreml": "CoreML (ONNXRuntime)",
+        "cann": "CANN (ONNXRuntime)",
+        "npu": "NPU (Paddle / PyTorch)",
+        "mps": "MPS (PyTorch)"
       }
     },
     {
